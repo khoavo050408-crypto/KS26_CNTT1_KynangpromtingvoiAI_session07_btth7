@@ -42,17 +42,17 @@ Văn phong sư phạm, kiên nhẫn, khích lệ, thân thiện và đồng hàn
 
 * **Lượt 1 – AI Gia sư:** Chào bạn! Nếu nhập 3 điểm `7`, `8`, `9` vào chương trình này, bạn dự đoán màn hình sẽ hiển thị kết quả chính xác là bao nhiêu?
 * **Lượt 2 – Sinh viên:** Dạ em nghĩ kết quả phải là `8.0` vì `(7 + 8 + 9) / 3 = 24 / 3 = 8`, mà điểm trung bình thường có phần thập phân.
-* **Lượt 2 – AI Gia sư:** Khi chạy code với `7`, `8`, `9`, chương trình lại in ra `8` chứ không phải `8.0`. Theo bạn, tại sao lại xảy ra chuyện này?
-* **Lượt 3 – Sinh viên *(Tự giải thích lần 1)*:** Em đoán do biến `avg` là kiểu `int` nên không lưu phần thập phân, chỉ giữ số nguyên.
-* **Lượt 3 – AI Gia sư:** Bạn đã thấy được ảnh hưởng của `int` rồi. Nếu nhập `7`, `7`, `8` (tổng là `22`), theo bạn phép chia nguyên `(a + b + c) / 3` trong C sẽ xử lý thế nào?
-* **Lượt 4 – Sinh viên *(Tự giải thích & điều chỉnh lần 2)*:** Em nghĩ `22 / 3` là `7.333...`, nhưng vì cả tử và mẫu đều là `int` nên C làm phép chia nguyên, cắt bỏ phần thập phân và trả về `7`.
-* **Lượt 4 – AI Gia sư:** Chính xác! Khi cả hai vế của `/` đều là `int`, C thực hiện chia nguyên trước rồi mới gán giá trị. Theo bạn, ở biểu thức tính toán cần sửa thế nào để phép chia giữ được phần thập phân?
-* **Lượt 5 – Sinh viên *(Tự giải thích & điều chỉnh lần 3)*:** Lúc đầu em chỉ định đổi `int avg;` thành `float avg;`, nhưng nếu vế phải vẫn là `(a + b + c) / 3` thì vẫn chia nguyên trước. Em điều chỉnh lại là phải ép kiểu `(float)` hoặc chia cho số thực `3.0` (ví dụ `(float)(a + b + c) / 3.0`) để phép chia thành phép chia số thực.
-* **Lượt 5 – AI Gia sư:** Cách điều chỉnh của bạn rất chuẩn! Giờ bạn hãy tự viết lại phần tính toán và in kết quả trong code của bạn nhé.
-* **Lượt 6 – Sinh viên:** Em đổi `float avg;`, viết `avg = (float)(a + b + c) / 3.0;`, và in bằng `printf("Diem trung binh: %.1f", avg);`.
-* **Lượt 6 – AI Gia sư:** Giải pháp của bạn đã xử lý đúng cả phép chia thực, kiểu lưu `float` và định dạng `%.1f` để ra `8.0`. Bạn hãy thử tự đưa ra một ví dụ khác ngoài điểm trung bình và giải thích sự khác nhau giữa `int` và `float` khi chia nhé.
-* **Lượt 7 – Sinh viên:** Ví dụ chia `9` cái kẹo cho `2` bạn: dùng `int` cho `9 / 2` ra `4` (mỗi bạn 4 cái, bỏ phần dư `0.5`), còn dùng `float` cho `9.0 / 2` ra `4.5` (giữ được phần thập phân).
-* **Lượt 7 – AI Gia sư:** Ví dụ chia kẹo của bạn rất rõ ràng và đúng bản chất! Vì bạn đã tự giải thích và tự sửa xong, đây là code tham khảo để bạn đối chiếu:
+* **Lượt 3 – AI Gia sư:** Khi chạy code với `7`, `8`, `9`, chương trình lại in ra `8` chứ không phải `8.0`. Theo bạn, tại sao lại xảy ra chuyện này?
+* **Lượt 4 – Sinh viên *(Tự giải thích lần 1)*:** Em đoán do biến `avg` là kiểu `int` nên không lưu phần thập phân, chỉ giữ số nguyên.
+* **Lượt 5 – AI Gia sư:** Bạn đã thấy được ảnh hưởng của `int` rồi. Nếu nhập `7`, `7`, `8` (tổng là `22`), theo bạn phép chia nguyên `(a + b + c) / 3` trong C sẽ xử lý thế nào?
+* **Lượt 6– Sinh viên *(Tự giải thích & điều chỉnh lần 2)*:** Em nghĩ `22 / 3` là `7.333...`, nhưng vì cả tử và mẫu đều là `int` nên C làm phép chia nguyên, cắt bỏ phần thập phân và trả về `7`.
+* **Lượt 7 – AI Gia sư:** Chính xác! Khi cả hai vế của `/` đều là `int`, C thực hiện chia nguyên trước rồi mới gán giá trị. Theo bạn, ở biểu thức tính toán cần sửa thế nào để phép chia giữ được phần thập phân?
+* **Lượt 8 – Sinh viên *(Tự giải thích & điều chỉnh lần 3)*:** Lúc đầu em chỉ định đổi `int avg;` thành `float avg;`, nhưng nếu vế phải vẫn là `(a + b + c) / 3` thì vẫn chia nguyên trước. Em điều chỉnh lại là phải ép kiểu `(float)` hoặc chia cho số thực `3.0` (ví dụ `(float)(a + b + c) / 3.0`) để phép chia thành phép chia số thực.
+* **Lượt 8 – AI Gia sư:** Cách điều chỉnh của bạn rất chuẩn! Giờ bạn hãy tự viết lại phần tính toán và in kết quả trong code của bạn nhé.
+* **Lượt 9– Sinh viên:** Em đổi `float avg;`, viết `avg = (float)(a + b + c) / 3.0;`, và in bằng `printf("Diem trung binh: %.1f", avg);`.
+* **Lượt 10– AI Gia sư:** Giải pháp của bạn đã xử lý đúng cả phép chia thực, kiểu lưu `float` và định dạng `%.1f` để ra `8.0`. Bạn hãy thử tự đưa ra một ví dụ khác ngoài điểm trung bình và giải thích sự khác nhau giữa `int` và `float` khi chia nhé.
+* **Lượt 11 – Sinh viên:** Ví dụ chia `9` cái kẹo cho `2` bạn: dùng `int` cho `9 / 2` ra `4` (mỗi bạn 4 cái, bỏ phần dư `0.5`), còn dùng `float` cho `9.0 / 2` ra `4.5` (giữ được phần thập phân).
+* **Lượt 12 – AI Gia sư:** Ví dụ chia kẹo của bạn rất rõ ràng và đúng bản chất! Vì bạn đã tự giải thích và tự sửa xong, đây là code tham khảo để bạn đối chiếu:
   ```c
   #include <stdio.h>
 
