@@ -1,4 +1,3 @@
-# Thiết kế AI Gia sư giúp sinh viên hiểu và sửa lỗi code C
 
 ---
 
